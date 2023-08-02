@@ -1,50 +1,51 @@
 import React, { useState, useEffect } from "react";
-import OrderForm from "./components/OrderForm";
-import OrderDisplay from "./components/OrderDisplay";
+import ProductForm from "./components/ProductForm";
+import ProductDisplay from "./components/ProductDisplay";
 import "./App.css";
 
 const App = () => {
   // const [formData, setFormData] = useState([]);
 
-  const [orders, setOrders] = useState([]);
+  const [products, setProducts] = useState([]);
   useEffect(() => {
-    const storedOrders = Object.keys(localStorage).map((orderId) =>
-      JSON.parse(localStorage.getItem(orderId))
+    const storedProducts = Object.keys(localStorage).map((productId) =>
+      JSON.parse(localStorage.getItem(productId))
     );
-    setOrders(storedOrders);
+    setProducts(storedProducts);
   }, []);
 
-  const addBillHandler = (orderId, price, dish, table) => {
-    const orderData = {
-      order_id: orderId,
+  const addProductHandler = (productId, price, name, category) => {
+    const productData = {
+      id: productId,
       price,
-      dish,
-      table,
+      name,
+      category,
     };
 
-    localStorage.setItem(orderId, JSON.stringify(orderData));
-    setOrders([...orders, orderData]);
+    localStorage.setItem(productId, JSON.stringify(productData));
+    setProducts([...products, productData]);
   };
 
-  const deleteBillHandler = (orderId) => {
-    localStorage.removeItem(orderId);
-    setOrders(orders.filter((data) => data.order_id !== orderId));
+  const deleteProductHandler = (productId) => {
+    localStorage.removeItem(productId);
+    setProducts(products.filter((data) => data.id !== productId));
   };
 
-  // const addBillHandler = (id, price, dish, table) => {
+  // const addProductHandler = (id, price, name, category) => {
   //   setFormData((prevFormData) => {
-  //     return [...prevFormData, {order_id: id, price: price, dish: dish, table: table}]
+  //     return [...prevFormData, {Product_id: id, price: price, name: name, category: category}]
   //   })
   // }
 
-  // const deleteBillHandler = (orderId) => {
-  //   setFormData((prevFormData) => prevFormData.filter((data) => data.order_id !== orderId)
+  // const deleteProductHandler = (ProductId) => {
+  //   setFormData((prevFormData) => prevFormData.filter((data) => data.Product_id !== ProductId)
   //   )
   // }
   return (
     <div className="App">
-      <OrderForm onAddBill={addBillHandler} />
-      <OrderDisplay onFormData={orders} onDelete={deleteBillHandler} />
+      <ProductForm onAddProduct={addProductHandler} />
+      <h2>Products List</h2>
+      <ProductDisplay onFormData={products} onDelete={deleteProductHandler} />
     </div>
   );
 };

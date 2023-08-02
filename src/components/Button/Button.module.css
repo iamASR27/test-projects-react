@@ -13,7 +13,7 @@
   
   .button:active,
   .button:hover {
-    background: #ccc;
+    background: #23aed8;
   }
   
   .button[type="submit"] {

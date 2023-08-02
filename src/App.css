@@ -4,3 +4,10 @@
     align-items: center;
     flex-direction: column;
 }
+
+.App h2 {
+    background-color: rgb(55, 160, 173);
+    border-radius: 10px;
+    padding: 5px 5px;
+    color: white;
+}

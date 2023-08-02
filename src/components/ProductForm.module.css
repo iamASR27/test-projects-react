@@ -6,7 +6,7 @@
     margin-bottom: 1rem;
     
 }
-.order_form {
+.product_form {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -22,10 +22,10 @@
     border-radius: 6px;
 }
 
-.order_form input {
+.product_form input {
     border-radius: 6px;
 }
 
-.order_form select {
+.product_form select {
     border-radius: 6px;
 }
