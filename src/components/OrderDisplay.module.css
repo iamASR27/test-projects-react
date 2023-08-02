@@ -1,0 +1,14 @@
+.display {
+    width: 86vw;
+    background-color: aqua;
+    border-radius: 6px;
+}
+
+.display ul{
+    list-style-type: disc;
+}
+
+.display ul li {
+    margin-bottom: 1px;
+    
+}

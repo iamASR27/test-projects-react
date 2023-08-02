@@ -1,0 +1,25 @@
+.button {
+    background: #330d99b4;
+    border: 1px solid #222;
+    padding: 5px 5px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 6px;
+    color: white;
+  }
+  
+  .button:active,
+  .button:hover {
+    background: #ccc;
+  }
+  
+  .button[type="submit"] {
+    width: 20vw;
+  }
+
+  .button[type="delete"] {
+    background-color: rgba(156, 7, 7, 0.959);
+  }
