@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderCartButton from './HeaderCartButton';
-import candyImage from './candyImage.jpg';
+import shirtImage from './shirtImage.avif';
 import styles from './Header.module.css';
 
 const Header = ({ onShowCart }) => {
@@ -10,7 +10,7 @@ const Header = ({ onShowCart }) => {
         <HeaderCartButton onClick={onShowCart}/>
     </header>
     <div className={styles['main-image']}>
-        <img src={candyImage} alt="candies" />
+        <img src={shirtImage} alt="shirts" />
     </div>
     </>
 }
