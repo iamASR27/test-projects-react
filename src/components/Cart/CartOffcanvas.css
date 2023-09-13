@@ -1,0 +1,45 @@
+.cart-table {
+    width: 100%;
+  }
+  
+  .cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 1px solid black; */
+    width: 80%;
+  }
+
+  .cart-item h2 {
+    font-size: 15px;
+    margin: 0px;
+    /* margin-top: 3px; */
+  }
+
+  .cart-item-image {
+    max-width: 20%;
+    height: 15%;
+    margin-right: 10px;
+    margin-left: 2px;
+    margin-top: 3px;
+  }
+
+ 
+  .btn-purchase {
+    margin: auto auto;
+    /* margin-bottom: 50%; */
+    position: sticky;
+    bottom: 1rem; 
+    padding: 1rem 0; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .btn-purchase .total-amount {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+  }
