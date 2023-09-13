@@ -1,0 +1,12 @@
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(202, 187, 166);
+    margin: 5rem auto;
+    width: 30%; 
+    padding: 1rem;
+  }
+  
+  

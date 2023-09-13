@@ -1,0 +1,13 @@
+.cart-icon {
+    font-size: larger;
+    color: white;
+    background-color: rgb(82, 86, 90);
+    border-radius: 10px;
+    min-width: 5rem;
+    max-width: 6rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
